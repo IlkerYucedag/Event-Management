@@ -1,0 +1,13 @@
+﻿@model User
+
+<h2>Kullanıcı Detayları</h2>
+
+<div>
+    <strong>ID:</strong> @Model.Id <br>
+    <strong>İsim:</strong> @Model.Name <br>
+    <strong>Email:</strong> @Model.Email <br>
+    <strong>Cinsiyet:</strong> @Model.Gender <br>
+    <strong>Durum:</strong> @Model.Status <br>
+</div>
+
+<button onclick="window.history.back()">Geri Dön</button>

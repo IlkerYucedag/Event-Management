@@ -1,0 +1,46 @@
+﻿@model Event_Management.Models.Participant
+
+@{
+    ViewData["Title"] = "Create Participant";
+}
+
+<h1>Create Participant</h1>
+
+<h4>Participant</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label"></label>
+                <input asp-for="Ad" class="form-control" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Soyad" class="control-label"></label>
+                <input asp-for="Soyad" class="form-control" />
+                <span asp-validation-for="Soyad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="E_posta" class="control-label"></label>
+                <input asp-for="E_posta" class="form-control" />
+                <span asp-validation-for="E_posta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input asp-for="Status" class="form-check-input" type="checkbox" id="IsActive">
+                    <label class="form-check-label" asp-for="Status">Status</label>
+                </div>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,18 @@
+﻿@model User
+
+<h2>Kullanıcı Düzenle</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id">
+    <input type="text" asp-for="Name" placeholder="İsim">
+    <input type="email" asp-for="Email" placeholder="Email">
+    <select asp-for="Gender">
+        <option value="male">Erkek</option>
+        <option value="female">Kadın</option>
+    </select>
+    <select asp-for="Status">
+        <option value="active">Aktif</option>
+        <option value="inactive">Pasif</option>
+    </select>
+    <button type="submit">Kaydet</button>
+</form>
